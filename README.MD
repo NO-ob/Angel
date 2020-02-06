@@ -6,5 +6,6 @@ Shows at mascot above all windows
  - Use [ and ] to resize
  - The arrow keys to move 
  - Q to quit
+ - O to open a file
 
 ![github-small](https://i.imgur.com/R6nRwSp.png)
