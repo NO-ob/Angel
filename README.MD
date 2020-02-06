@@ -3,8 +3,8 @@
 
 Shows at mascot above all windows
 
-Use [ and ] to resize
-The arrow keys to move 
-Q to quit
+ - Use [ and ] to resize
+ - The arrow keys to move 
+ - Q to quit
 
 ![github-small](https://i.imgur.com/R6nRwSp.png)

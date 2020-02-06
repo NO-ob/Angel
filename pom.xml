@@ -81,6 +81,7 @@
                         <list>Mascot.MascotController</list>
                         <list>Mascot.Main</list>
                         <list>java.io.File</list>
+                        <list>javafx.scene.input.Clipboard</list>
                     </reflectionList>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
