@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>no</groupId>
+    <artifactId>Mascot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Mascot</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <javafx.version>13.0.1</javafx.version>
+        <client.plugin.version>0.1.15</client.plugin.version>
+        <mainClassName>Mascot.Main</mainClassName>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+                    <mainClass>${mainClassName}</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.gluonhq</groupId>
+                <artifactId>client-maven-plugin</artifactId>
+                <version>${client.plugin.version}</version>
+                <configuration>
+                    <!-- Uncomment to run on iOS: -->
+                    <!-- <target>ios</target>-->
+                    <reflectionList>
+                        <list>javafx.application.Application</list>
+                        <list>javafx.fxml.FXMLLoader</list>
+                        <list>javafx.event.ActionEvent</list>
+                        <list>javafx.event.EventHandler</list>
+                        <list>javafx.scene.image.Image</list>
+                        <list>javafx.fxml.FXML</list>
+                        <list>javafx.scene.image.ImageView</list>
+                        <list>javafx.scene.input.MouseEvent</list>
+                        <list>javafx.scene.Parent</list>
+                        <list>javafx.scene.Scene</list>
+                        <list>javafx.stage.Stage</list>
+                        <list>java.util.ArrayList</list>
+                        <list>javafx.scene.layout.VBox</list>
+                        <list>javafx.scene.input.KeyCode</list>
+                        <list>javafx.scene.input.KeyEvent</list>
+                        <list>javafx.event.Event</list>
+                        <list>javafx.scene.input.KeyEvent</list>
+                        <list>javafx.stage.WindowEvent</list>
+                        <list>Mascot.MascotController</list>
+                        <list>Mascot.Main</list>
+                        <list>java.io.File</list>
+                    </reflectionList>
+                    <mainClass>${mainClassName}</mainClass>
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>gluon-releases</id>
+            <url>http://nexus.gluonhq.com/nexus/content/repositories/releases/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

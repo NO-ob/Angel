@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Mascot.MascotController" fx:id="main" focusTraversable="true"
+>
+    <ImageView fx:id="mascotView" onMousePressed="#imgClicked" onMouseDragged="#imgDragged"></ImageView>
+</VBox>
