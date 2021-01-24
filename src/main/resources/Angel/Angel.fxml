@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.TextFlow?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Angel.AngelController" fx:id="main" focusTraversable="true"
+>
+    <VBox spacing="10" style="-fx-padding: 5" fx:id="bibleContainer">
+        <TextFlow style="-fx-padding: 5;" fx:id="textFlowTitle">
+            <Text fx:id="bookName"></Text>
+        </TextFlow>
+        <TextFlow style="-fx-padding: 5;" fx:id="textFlowPassage">
+            <Text fx:id="biblePassage"></Text>
+        </TextFlow>
+        <HBox spacing="10">
+            <TextFlow style="-fx-padding: 5;" fx:id="textFlowNext" onMouseClicked="#nextButton">
+                <Text text="Next"></Text>
+            </TextFlow>
+            <TextFlow style="-fx-padding: 5;" fx:id="textFlowRandom" onMouseClicked="#randButton">
+                <Text text="Random"></Text>
+            </TextFlow>
+            <TextFlow style="-fx-padding: 5;" fx:id="textFlowBookPrev" onMouseClicked="#prevBook">
+                <Text text="Book -"></Text>
+            </TextFlow>
+            <TextFlow style="-fx-padding: 5;" fx:id="textFlowBookNext" onMouseClicked="#nextBook">
+                <Text text="Book +"></Text>
+            </TextFlow>
+        </HBox>
+    </VBox>
+
+    <ImageView fx:id="mascotView" onMousePressed="#imgClicked" onMouseDragged="#imgDragged"></ImageView>
+</VBox>

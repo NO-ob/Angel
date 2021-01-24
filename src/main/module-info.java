@@ -24,10 +24,11 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-module Mascot {
+module Angel {
     requires javafx.controls;
     requires javafx.fxml;
-    opens Mascot to javafx.fxml;
+    requires javafx.graphics;
+    opens Angel to javafx.fxml;
 
-    exports Mascot;
+    exports Angel;
 }
